@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-toolbar>
+      <ion-searchbar (ionInput)="searchEvent($event)" animated placeholder="Nome do produto"></ion-searchbar>
+    </ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+      
+    </ion-toolbar>
+  </ion-header>
+<ion-card-content>
+
+  
+  <ion-list>
+    <ion-item *ngFor="let item of listProduts.content">       
+      <ion-label>{{item.name}}</ion-label>
+      <p>{{item.identifier}}</p>        
+    </ion-item>
+  </ion-list>
+  
+
+</ion-card-content>
+
+</ion-content>

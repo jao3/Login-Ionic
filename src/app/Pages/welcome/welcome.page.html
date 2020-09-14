@@ -1,0 +1,22 @@
+<ion-content>
+  <div class="center">
+    <ion-slides #slides pager="true" [options]=slideOpts (ionSlideDidChange)="ionSlideChange(slides)">
+      <ion-slide class="step-one">
+        <img margintop20 src="../../../assets/images/money.png" alt="">
+        <p>Consulte a tributação dos seus produtos</p>
+      </ion-slide>
+      <ion-slide class="step-two">
+        <img margintop20 src="" alt="">
+        <p>Controle a validade dos seus produtos</p>
+      </ion-slide>
+      <ion-slide class="step-two">
+        <img margintop20 src="../../../assets/images/inventario.png" alt="">
+        <p>Realize inventarios diariamente</p>
+      </ion-slide>
+    </ion-slides>    
+  </div>
+  <div class="btn-lr">
+    <ion-button outline="block" color="primary" [routerLink] = "['/login']" routerDirection="foward">ENTRAR</ion-button>
+    <ion-button outline="block" color="primary" [routerLink] = "['/register']" routerDirection="foward">INSCREVER-SE</ion-button>
+  </div>
+</ion-content>

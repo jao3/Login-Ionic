@@ -1,0 +1,39 @@
+<ion-content class="background">
+  <ion-card>
+    <ion-card-content>
+      <img src="/../../assets/images/logo-ionic.png">
+      <form [formGroup]="loginForm">
+        <ion-list no-lines>
+
+          <ion-item>
+
+            <ion-input formControlName="username" type="text" placeholder="Usuário" id="username"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="password" [type]="showPassword ? 'text' : 'password'" placeholder="Senha"></ion-input>
+            <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <p><a>Esqueceu a senha?</a></p>
+          </ion-item>
+          <ion-button [disabled]="!loginForm.valid" outline="block" color="primary" (click)="Login()">Entrar
+          </ion-button>
+        </ion-list>
+        <b>OU ENTRE COM</b>
+        <ion-row class="social-button">
+          <ion-col>
+            <ion-button color="light" fill="clear">
+              <img style="width: 45px;" src="../../../assets/images/icon-facebook.png" alt="">
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button fill="clear" color="light">
+              <img style="width: 45px; " src="../../../assets/images/icon-google.png" alt="">
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
